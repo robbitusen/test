@@ -1,0 +1,22 @@
+{
+  "name": "blubolt",
+  "version": "1.0.0",
+  "description": "Code test",
+  "main": "index.js",
+  "scripts": {
+    "test": "autoprefixer-cli -o css/style.prefixed.css css/style.css"
+  },
+  "author": "Jake Gabb",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean": "^0.3.2",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-copy": "^1.0.1",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0"
+  }
+}

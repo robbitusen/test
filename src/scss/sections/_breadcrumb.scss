@@ -1,0 +1,23 @@
+.breadcrumb {
+	position: relative;
+	width: 100%;
+	float: left;
+	display: block;
+}
+.breadcrumb__nav-wrap {
+	display: flex;
+	max-width: $container;
+	margin: 0 auto;
+	height: 88px;
+}
+.breadcrumb__nav {
+	width: 100%;
+	align-self: center;
+	padding: 0 30px;
+}
+.breadcrumb__nav-link {
+  	font-size: 16px;
+  	font-family: $fontfamily;
+  	color: rgb(153, 153, 153);
+  	text-decoration: none;
+}

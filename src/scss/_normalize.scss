@@ -1,0 +1,8 @@
+@import 'normalize/variables';
+@import 'normalize/vertical-rhythm';
+@import 'normalize/normalize-mixin';
+
+* {
+	box-sizing: border-box;
+}
+@include normalize;

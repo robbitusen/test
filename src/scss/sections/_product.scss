@@ -1,0 +1,108 @@
+.product {
+	width: 100%;
+	position: relative;
+	display: block;
+	float: left;
+	.product__wrap {
+		max-width: $container;
+		margin: 0 auto;
+		display: flex;
+		@media screen and (max-width: $breakpoint__tab) {
+			flex-direction: column-reverse;
+		}
+	}
+	.product__slider {
+		padding: 0 30px;
+		width: 50%;
+		float: left;
+		position: relative;
+		@media screen and (max-width: $breakpoint__tab) {
+			width: 100%;
+		}
+	}
+	.product__details {
+		padding: 30px;
+		float: left;
+		position: relative;
+		@media screen and (max-width: $breakpoint__tab) {
+			width: 100%;
+		}
+	}
+}
+.product__slider {
+	.slick-list {
+		height: 0;
+		padding-bottom: 100%; //force to square shape
+	    cursor: grab;
+	    border-radius: 3px;
+	    &:after {
+	    	height: 0;
+	    	padding-bottom: 100%;
+	    	content: "";
+	    }
+	}
+	.slick-dots {
+		overflow: hidden;
+		padding-left: 0;
+		margin: 0;
+		margin-top: $slider__gutter;
+		@media screen and (max-width: $breakpoint__tab-wide) {
+			margin-top: calc(#{$slider__gutter} / 2);
+		}
+		li {
+		    list-style: none;
+		    float: left;
+		    display: inline-block;
+		    margin-right: $slider__gutter;
+		    position: relative;
+		    cursor: pointer;
+		    @media screen and (max-width: $breakpoint__tab-wide) {
+		    	margin-right: calc(#{$slider__gutter} / 2);
+		    }
+		    .product__slider-lens {
+				visibility: hidden;
+				opacity: 0;
+				position: absolute;
+			    top: 0;
+			    left: 0;
+			    right: 0;
+			    bottom: 0;
+			    border: 3px solid black;
+			    background-color: rgba(57,158,162,0.4);
+			    border-radius: 3px;
+			    transition: $transition;
+			}
+		    &.slick-active {
+				.product__slider-lens {
+					visibility: visible;
+					opacity: 1;
+					transition: $transition
+				}
+		    }
+		}
+	}
+	.product__slide {
+		background-size: cover;
+		border-radius: 3px;
+		&:after {
+			display: block;
+			padding-bottom: 100%;
+			content: "";
+		}
+	}
+	.product__slider-tab {
+	    width: 100px;
+	    height: 100px;
+	    display: block;
+	    background-size: cover;
+	    list-style: none;
+	    border-radius: 3px;
+	    @media screen and (max-width: $breakpoint__tab-wide) {
+	    	width: 80px;
+	    	height: 80px;
+	    }
+	}
+}
+.product__details {
+
+}
