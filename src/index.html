@@ -33,12 +33,12 @@
 			</div>
 			<div class="header__nav-secondary">
 				<div class="header__search">
-					<a href="#">
+					<a>
 						<img src="/img/src/img/search.png" alt="Cart Icon">
 					</a>
 				</div>
 				<div class="header__cart">
-					<a href="#">
+					<a>
 						<img src="/img/src/img/cart.png" alt="Cart Icon">
 					</a>
 				</div>
@@ -83,9 +83,51 @@
 				</li>
 			</ul>
 		</div>
+		<div class="header__search-wrap">
+			<div class="header__search-form">
+				<input class="header__search-input" type="text">
+				<button class="header__search-submit">Go</button>
+			</div>
+		</div>
+		<div class="header__basket-modal">
+			<div class="header__basket-wrap">
+				<div class="header__basket">
+					<div class="header__basket-content">
+						<ul class="header__basket-items">
+							<li class="header__basket-item" data-product-id="123">
+								<h3 class="header__basket-item-title">Cooking With Honey, the Healthy Sweetener</h3>
+								<div class="header__basket-item-price-qty">
+									<span class="header__basket-item-price">£30.00</span>
+									<div class="header__basket-item-qty">
+										<span class="header__basket-item-add">
+											<i class="fa fa-plus"></i>
+										</span>
+										<span class="header__basket-item-qty">1</span>
+										<span class="header__basket-item-sub">
+											<i class="fa fa-minus"></i>
+										</span>
+									</div>
+								</div>
+								<span class="header__basket-item-remove">
+									Remove&nbsp;<i class="fa fa-times"></i>
+								</span>
+							</li>
+						</ul>
+						<div class="header__basket-total">
+							<span class="total"><em>TOTAL:&nbsp;</em>£30.00</span>
+						</div>
+						
+					</div>
+					<div class="header__ctas">
+						<a href="#" class="header__cart-cta">Go to Cart</a>
+						<a href="#" class="header__checkout-cta">Checkout</a>
+					</div>
+				</div>
+			</div>
+		</div>
 	</header>
 
-	<section class="breadcrumb">
+	<section class="breadcrumb wow fadeIn">
 		<div class="breadcrumb__nav-wrap">
 			<nav class="breadcrumb__nav">
 				<a href="#" class="breadcrumb__nav-link">Home &gt;</a>
@@ -95,7 +137,7 @@
 		</div>
 	</section>
 
-	<section class="product">
+	<section class="product wow fadeIn">
 		<div class="product__wrap">
 			<div class="product__slider">
 				<div class="product__slide" style="background-image: url('/img/src/img/book.jpg');" data-bg-image="/img/src/img/book.jpg">
@@ -107,31 +149,44 @@
 			</div>
 			<div class="product__details">
 				<h1 class="product__title">Cooking With Honey<br>The Healthy Sweetener</h1>
-				<h2 class="product__price">£30.99<span>&nbsp;was £40.99</span></h2>
-				<p class="product__description"></p>
+				<h2 class="product__price">£30.99<span class="product__compare-price">was £40.99</span></h2>
+				<p class="product__description">
+					If you are a culinary fan, if you like to spend time in your kitchen, you likely find yourself looking for reliable resources through which you can make the purchase of cookware products in the brick and mortar world.
+				</p>
 				<span class="product__color-selected"></span>
 				<form action="" class="product__options">
-					<span class="product__color"></span>
-					<fieldset id="color">
-						<label for="r_royal-purple"></label>
-						<input type="radio" value="royal-purple" id="r_royal-purple" name="color">
-						<label for="r_royal-purple"></label>
-						<input type="radio" value="orange" id="r_orange" name="color">
-						<label for="r_royal-purple"></label>
-						<input type="radio" value="magenta" id="r_magenta" name="color">
-						<label for="r_royal-purple"></label>
-						<input type="radio" value="teal" id="r_teal" name="color">
+					<p class="product__color">Colour <span class="product__color-name">Orange</span></p>
+					<fieldset id="color" class="product__color-select">
+						<label class="product__color-label" for="r_royal-purple" id="l_royal-purple">
+							<span class="product__tooltip">Royal Purple</span>
+						</label>
+						<input type="radio" value="royal-purple" id="r_royal-purple" name="color" data-in-stock="false">
+						<label class="product__color-label" for="r_orange" id="l_orange">
+							<span class="product__tooltip">Orange</span>
+						</label>
+						<input type="radio" value="orange" id="r_orange" name="color" data-in-stock="true">
+						<label class="product__color-label" for="r_magenta" id="l_magenta">
+							<span class="product__tooltip">Magenta</span>
+						</label>
+						<input type="radio" value="magenta" id="r_magenta" name="color" data-in-stock="false">
+						<label class="product__color-label" for="r_teal" id="l_teal">
+							<span class="product__tooltip">Teal</span>
+						</label>
+						<input type="radio" value="teal" id="r_teal" name="color" data-in-stock="true">
 					</fieldset>
-					<span class="product__in-stock"></span>
-					<label for="n_qty">Quantity</label>
-					<input type="number" id="n_qty" value="" placeholder="1" name="qty">
-					<input type="submit">
+					<span class="product__in-stock">In Stock</span>
+					<div class="product__quantity-select">
+						<label for="n_qty" id="l_qty">Quantity</label>
+						<input type="number" id="n_qty" value="" placeholder="1" name="qty" min="0">
+						<input type="submit" class="product__basket-add" value="Add to Basket">
+					</div>
+					
 				</form>
 			</div>
 		</div>
 	</section>
 
-	<section class="hero-banner">
+	<section class="hero-banner wow fadeInUp" data-wow-duration="1s" style="background-image: url('/img/src/img/hero-still.jpg');">
 		<h3 class="hero-banner__message">This Product is Awesome</h3>
 	</section>
 	

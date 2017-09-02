@@ -3,8 +3,27 @@
 	width: 100%;
 	display: flex;
 	flex-direction: row;
+	height: 458px;
 	justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 88px;
+    padding: 0 30px;
 }
 .hero-banner__message {
 	align-self: center;
+	font-size: 60px;
+	font-family: $fontfamily;
+	color: #fff;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+	@media screen and (max-width: $breakpoint__tab) {
+		font-size: 50px;
+	}
+	@media screen and (max-width: $breakpoint__mob) {
+		font-size: 40px;
+	}
 }
